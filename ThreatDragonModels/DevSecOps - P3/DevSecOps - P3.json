@@ -20,6 +20,31 @@
         "cells": [
           {
             "position": {
+              "x": 189.99999999999238,
+              "y": -502
+            },
+            "size": {
+              "width": 1150,
+              "height": 1030
+            },
+            "shape": "trust-boundary-box",
+            "attrs": {
+              "headerText": {
+                "text": "SIEM-System"
+              }
+            },
+            "id": "e84285c9-7879-4915-aedb-318c833ee15f",
+            "zIndex": -1,
+            "data": {
+              "type": "tm.BoundaryBox",
+              "name": "SIEM-System",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            }
+          },
+          {
+            "position": {
               "x": 12,
               "y": 53
             },
@@ -176,8 +201,8 @@
           },
           {
             "position": {
-              "x": 571,
-              "y": 266
+              "x": 1100,
+              "y": 315
             },
             "size": {
               "width": 120,
@@ -606,64 +631,6 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Boundary",
-              "name": "Externer Service für T\nelefonnummernauflö\nsung",
-              "description": "",
-              "isTrustBoundary": true,
-              "hasOpenThreats": false
-            },
-            "id": "8c690a8a-f100-4c4d-bd88-095a530ac220",
-            "labels": [
-              {
-                "position": {
-                  "distance": 0,
-                  "offset": 25.336937022630487
-                },
-                "attrs": {
-                  "label": {
-                    "text": "Firma Allsecure"
-                  }
-                }
-              }
-            ],
-            "source": {
-              "x": 241,
-              "y": 135
-            },
-            "target": {
-              "x": 246,
-              "y": 138
-            },
-            "vertices": [
-              {
-                "x": 623,
-                "y": 156
-              },
-              {
-                "x": 638,
-                "y": -46
-              },
-              {
-                "x": 550,
-                "y": -204
-              },
-              {
-                "x": 340,
-                "y": -174
-              },
-              {
-                "x": 243,
-                "y": -8
-              }
-            ]
-          },
-          {
-            "shape": "trust-broundary-curve",
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Boundary",
               "name": "Externer Service für \nTelefonnummernauflösung (Telco)",
               "description": "",
               "isTrustBoundary": true,
@@ -682,10 +649,6 @@
               "y": 53
             },
             "vertices": [
-              {
-                "x": 822,
-                "y": -91
-              },
               {
                 "x": 822,
                 "y": -130
@@ -740,33 +703,33 @@
               }
             ],
             "source": {
-              "x": 540,
-              "y": 259
+              "x": 1069,
+              "y": 308
             },
             "target": {
-              "x": 539,
-              "y": 259
+              "x": 1068,
+              "y": 308
             },
             "vertices": [
               {
-                "x": 460,
-                "y": 259
+                "x": 989,
+                "y": 308
               },
               {
-                "x": 390,
-                "y": 305
+                "x": 919,
+                "y": 354
               },
               {
-                "x": 420,
-                "y": 394
+                "x": 949,
+                "y": 443
               },
               {
-                "x": 685,
-                "y": 394
+                "x": 1214,
+                "y": 443
               },
               {
-                "x": 710,
-                "y": 266
+                "x": 1239,
+                "y": 315
               }
             ]
           },
@@ -861,8 +824,8 @@
             },
             "vertices": [
               {
-                "x": 560,
-                "y": 465
+                "x": 1089,
+                "y": 514
               }
             ]
           },
@@ -1033,6 +996,154 @@
             ]
           },
           {
+            "shape": "trust-broundary-curve",
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Boundary",
+              "name": "Externer Service für T\nelefonnummernauflö\nsung",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            },
+            "id": "8c690a8a-f100-4c4d-bd88-095a530ac220",
+            "labels": [
+              {
+                "position": {
+                  "distance": 0,
+                  "offset": 25.336937022630487
+                },
+                "attrs": {
+                  "label": {
+                    "text": "Firma Allsecure"
+                  }
+                }
+              }
+            ],
+            "source": {
+              "x": 230,
+              "y": 120
+            },
+            "target": {
+              "x": 230,
+              "y": 120
+            },
+            "vertices": [
+              {
+                "x": 210,
+                "y": 220
+              },
+              {
+                "x": 270,
+                "y": 430
+              },
+              {
+                "x": 600,
+                "y": 430
+              },
+              {
+                "x": 670,
+                "y": 170
+              },
+              {
+                "x": 638,
+                "y": -46
+              },
+              {
+                "x": 550,
+                "y": -204
+              },
+              {
+                "x": 340,
+                "y": -174
+              },
+              {
+                "x": 243,
+                "y": -8
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Data Flow",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "db877f09-490d-4424-b11e-b357b55b6271",
+            "source": {
+              "cell": "64d6f65b-bc61-4419-93c8-bf831427723b"
+            },
+            "target": {
+              "cell": "a1d5bbe6-465f-43bb-bd96-7ce687db37aa"
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Data Flow",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "e108677d-2db6-49e4-88b6-e24af63df534",
+            "source": {
+              "cell": "fd7303e8-29d2-4d76-bf7d-87eb619ede69"
+            },
+            "target": {
+              "cell": "64d6f65b-bc61-4419-93c8-bf831427723b"
+            }
+          },
+          {
             "position": {
               "x": 410,
               "y": -174
@@ -1074,8 +1185,8 @@
           },
           {
             "position": {
-              "x": 421,
-              "y": 311
+              "x": 950,
+              "y": 360
             },
             "size": {
               "width": 120,
@@ -1153,6 +1264,43 @@
               "isBidirectional": false,
               "protocol": "",
               "isPublicNetwork": false
+            }
+          },
+          {
+            "position": {
+              "x": 270,
+              "y": 190
+            },
+            "size": {
+              "width": 130,
+              "height": 140
+            },
+            "attrs": {
+              "text": {
+                "text": "Allsecure Mobile \nPhone OTT Service"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "id": "64d6f65b-bc61-4419-93c8-bf831427723b",
+            "zIndex": 14,
+            "data": {
+              "type": "tm.Process",
+              "name": "Allsecure Mobile \nPhone OTT Service",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isWebApplication": false,
+              "privilegeLevel": "",
+              "threats": []
             }
           }
         ],
