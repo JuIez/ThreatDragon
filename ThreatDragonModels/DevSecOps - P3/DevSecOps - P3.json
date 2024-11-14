@@ -104,7 +104,7 @@
                   "severity": "Medium",
                   "type": "Tampering",
                   "description": "Ein Angreifer könnte manipulierte Weiterleitungen in der Webanwendung einfügen, um Benutzer auf schädliche Seiten umzuleiten.\n\nCAPEC-34 - \"HTTP Response Splitting\" (könnte verwendet werden, um die Weiterleitungen zu manipulieren).\n\nMITRE: T1437.001 - - Application Layer Protocol: Web Protocols",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "mitigation": "- Validierung und Normalisierung der URL-Parameter, um sicherzustellen, dass sie keine unerwarteten Weiterleitungen verursachen.\n- Nutzung sicherer Methoden zur Generierung von Weiterleitungen und Headern, um Code-Injection zu verhindern.",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 105,
@@ -116,7 +116,7 @@
                   "status": "Open",
                   "severity": "Medium",
                   "type": "Repudiation",
-                  "description": "Ein Benutzer behaupten könnte, den OTT nicht erhalten zu haben.",
+                  "description": "Ein Benutzer behaupten könnte, den OTT nicht erhalten zu haben.\n\nCAPEC-216 - \"Communication Channel Manipulation\" - Bezug auf die Möglichkeit, OTT abzufangen oder zu manipulieren.\n\nMITRE: T1078 -- Tactic \"Defense Evasion\" und Technique \"T1078\" - Valid Accounts (sich als legitimer Nutzer ausgeben, z.B. durch das Behaupten, keinen OTT erhalten zu haben).",
                   "mitigation": "Provide remediation for this threat or a reason if status is N/A",
                   "modelType": "STRIDE",
                   "new": false,
@@ -1114,15 +1114,15 @@
               "threats": []
             },
             "id": "e108677d-2db6-49e4-88b6-e24af63df534",
+            "labels": [
+              "Anfrage OTT Service"
+            ],
             "source": {
               "cell": "fd7303e8-29d2-4d76-bf7d-87eb619ede69"
             },
             "target": {
               "cell": "64d6f65b-bc61-4419-93c8-bf831427723b"
-            },
-            "labels": [
-              "Anfrage OTT Service"
-            ]
+            }
           },
           {
             "shape": "flow",
@@ -1156,6 +1156,9 @@
               "threats": []
             },
             "id": "c0b116e2-5805-43d9-a5b5-5667479fa9c1",
+            "labels": [
+              "Auslesen von Informationen"
+            ],
             "source": {
               "cell": "9720cf34-75a7-44e5-b271-d57e6e8f26b2"
             },
@@ -1167,9 +1170,6 @@
                 "x": 360,
                 "y": -80
               }
-            ],
-            "labels": [
-              "Auslesen von Informationen"
             ]
           },
           {
@@ -1204,15 +1204,15 @@
               "threats": []
             },
             "id": "e68cdea4-ba99-463b-8d2e-0669cf5488e0",
+            "labels": [
+              "Überwacht"
+            ],
             "source": {
               "cell": "f0d9ea7e-cf4e-439a-b0e0-a400d77188e9"
             },
             "target": {
               "cell": "94f68ce7-aa88-45a4-ba41-c0b62d6a959c"
-            },
-            "labels": [
-              "Überwacht"
-            ]
+            }
           },
           {
             "shape": "flow",
@@ -1246,15 +1246,15 @@
               "threats": []
             },
             "id": "e7541e12-6f7e-4809-92af-01196404335c",
+            "labels": [
+              "Überwacht"
+            ],
             "source": {
               "cell": "f0d9ea7e-cf4e-439a-b0e0-a400d77188e9"
             },
             "target": {
               "cell": "64d6f65b-bc61-4419-93c8-bf831427723b"
-            },
-            "labels": [
-              "Überwacht"
-            ]
+            }
           },
           {
             "shape": "flow",
@@ -1288,15 +1288,15 @@
               "threats": []
             },
             "id": "6479d099-4450-4d7c-a8d8-70024da1a7a7",
+            "labels": [
+              "monatlich\nreport senden\nsigniert"
+            ],
             "source": {
               "cell": "9720cf34-75a7-44e5-b271-d57e6e8f26b2"
             },
             "target": {
               "cell": "5405a95f-565d-498a-b533-7acbda71cfb9"
             },
-            "labels": [
-              "monatlich\nreport senden\nsigniert"
-            ],
             "vertices": []
           },
           {
@@ -1331,15 +1331,15 @@
               "threats": []
             },
             "id": "3b4106ba-45d8-4647-ab36-32f381f616e1",
+            "labels": [
+              "wöchentlich\nreport senden\nsigniert"
+            ],
             "source": {
               "cell": "f0d9ea7e-cf4e-439a-b0e0-a400d77188e9"
             },
             "target": {
               "cell": "5405a95f-565d-498a-b533-7acbda71cfb9"
-            },
-            "labels": [
-              "wöchentlich\nreport senden\nsigniert"
-            ]
+            }
           },
           {
             "shape": "flow",
@@ -1412,15 +1412,15 @@
               "threats": []
             },
             "id": "0ab38160-7aeb-4ac7-899e-86f9515248bf",
+            "labels": [
+              ""
+            ],
             "source": {
               "cell": "94f68ce7-aa88-45a4-ba41-c0b62d6a959c"
             },
             "target": {
               "cell": "f0d9ea7e-cf4e-439a-b0e0-a400d77188e9"
-            },
-            "labels": [
-              ""
-            ]
+            }
           },
           {
             "shape": "flow",
@@ -1454,15 +1454,15 @@
               "threats": []
             },
             "id": "db877f09-490d-4424-b11e-b357b55b6271",
+            "labels": [
+              "OTT"
+            ],
             "source": {
               "cell": "64d6f65b-bc61-4419-93c8-bf831427723b"
             },
             "target": {
               "cell": "a1d5bbe6-465f-43bb-bd96-7ce687db37aa"
-            },
-            "labels": [
-              "OTT"
-            ]
+            }
           },
           {
             "position": {
@@ -1676,8 +1676,8 @@
             },
             "visible": true,
             "shape": "process",
-            "id": "9720cf34-75a7-44e5-b271-d57e6e8f26b2",
             "zIndex": 16,
+            "id": "9720cf34-75a7-44e5-b271-d57e6e8f26b2",
             "data": {
               "type": "tm.Process",
               "name": "Report\nExport\nProcesse",
@@ -1727,8 +1727,8 @@
             },
             "visible": true,
             "shape": "process",
-            "id": "f0d9ea7e-cf4e-439a-b0e0-a400d77188e9",
             "zIndex": 17,
+            "id": "f0d9ea7e-cf4e-439a-b0e0-a400d77188e9",
             "data": {
               "type": "tm.Process",
               "name": "SIEM",
@@ -1778,8 +1778,8 @@
             },
             "visible": true,
             "shape": "actor",
-            "id": "5405a95f-565d-498a-b533-7acbda71cfb9",
             "zIndex": 18,
+            "id": "5405a95f-565d-498a-b533-7acbda71cfb9",
             "data": {
               "type": "tm.Actor",
               "name": "Managment",
