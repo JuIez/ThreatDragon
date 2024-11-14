@@ -56,7 +56,7 @@
           {
             "position": {
               "x": -220,
-              "y": -6.999999999999922
+              "y": -3
             },
             "size": {
               "width": 130,
@@ -67,8 +67,8 @@
                 "text": "Login System -\nWebapp +\nMobile App"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -96,10 +96,38 @@
                   "new": false,
                   "number": 101,
                   "score": "28"
+                },
+                {
+                  "id": "57d63425-ed04-4dd6-81a0-84e697b139a1",
+                  "title": "Modifies redirects in webapp",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "description": "Ein Angreifer könnte manipulierte Weiterleitungen in der Webanwendung einfügen, um Benutzer auf schädliche Seiten umzuleiten.\n\nCAPEC-34 - \"HTTP Response Splitting\" (könnte verwendet werden, um die Weiterleitungen zu manipulieren).\n\nMITRE: T1437.001 - - Application Layer Protocol: Web Protocols",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 105,
+                  "score": ""
+                },
+                {
+                  "id": "65dd1119-4397-4af2-997b-1e19133f6212",
+                  "title": "Claims to have not received",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Repudiation",
+                  "description": "Ein Benutzer behaupten könnte, den OTT nicht erhalten zu haben.",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 108,
+                  "score": ""
                 }
               ],
-              "hasOpenThreats": false,
-              "isWebApplication": null
+              "hasOpenThreats": true,
+              "isWebApplication": null,
+              "handlesCardPayment": null,
+              "handlesGoodsOrServices": null
             }
           },
           {
@@ -116,8 +144,8 @@
                 "text": "2-Faktor-Authe\nntifizierungsdi\nenst"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -132,12 +160,29 @@
               "isTrustBoundary": false,
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "threats": [],
-              "hasOpenThreats": false,
+              "threats": [
+                {
+                  "id": "d45ac3a6-478d-4479-abc3-7577439e0e04",
+                  "title": "Spoofing von Nutzeridentitäten",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Spoofing",
+                  "description": "Ein Angreifer könnte sich als legitimer Benutzer ausgeben und versuchen, den OTT (One-Time Token) abzufangen oder zu erraten, um Zugang zu einem Konto zu erhalten.",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 112,
+                  "score": ""
+                }
+              ],
+              "hasOpenThreats": true,
               "isBidirectional": false,
               "protocol": "",
               "isEncrypted": false,
-              "isPublicNetwork": false
+              "isPublicNetwork": false,
+              "handlesCardPayment": null,
+              "handlesGoodsOrServices": null,
+              "isWebApplication": null
             }
           },
           {
@@ -225,7 +270,8 @@
               "isEncrypted": false,
               "isPublicNetwork": false,
               "handlesCardPayment": null,
-              "handlesGoodsOrServices": null
+              "handlesGoodsOrServices": null,
+              "isWebApplication": null
             }
           },
           {
@@ -971,48 +1017,6 @@
             ]
           },
           {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "OTT",
-              "description": "",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
-            "id": "db877f09-490d-4424-b11e-b357b55b6271",
-            "source": {
-              "cell": "64d6f65b-bc61-4419-93c8-bf831427723b"
-            },
-            "target": {
-              "cell": "a1d5bbe6-465f-43bb-bd96-7ce687db37aa"
-            },
-            "labels": [
-              "OTT"
-            ]
-          },
-          {
             "shape": "trust-broundary-curve",
             "width": 200,
             "height": 100,
@@ -1338,6 +1342,129 @@
             ]
           },
           {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Data Flow",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "89908b60-6f60-43da-afae-a68de8920ff4",
+            "source": {
+              "cell": "64d6f65b-bc61-4419-93c8-bf831427723b"
+            },
+            "target": {
+              "cell": "f0d9ea7e-cf4e-439a-b0e0-a400d77188e9"
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "0ab38160-7aeb-4ac7-899e-86f9515248bf",
+            "source": {
+              "cell": "94f68ce7-aa88-45a4-ba41-c0b62d6a959c"
+            },
+            "target": {
+              "cell": "f0d9ea7e-cf4e-439a-b0e0-a400d77188e9"
+            },
+            "labels": [
+              ""
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "OTT",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "db877f09-490d-4424-b11e-b357b55b6271",
+            "source": {
+              "cell": "64d6f65b-bc61-4419-93c8-bf831427723b"
+            },
+            "target": {
+              "cell": "a1d5bbe6-465f-43bb-bd96-7ce687db37aa"
+            },
+            "labels": [
+              "OTT"
+            ]
+          },
+          {
             "position": {
               "x": 410,
               "y": -174
@@ -1351,11 +1478,13 @@
                 "text": "Log-DB"
               },
               "topLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               },
               "bottomLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -1373,8 +1502,22 @@
               "storesCredentials": false,
               "isEncrypted": true,
               "isSigned": true,
-              "hasOpenThreats": false,
-              "threats": [],
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "id": "417fca9e-4ed6-43ca-8a42-786145c0d77a",
+                  "title": "Data Stores",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "description": "Ein Angreifer könnte hier versuchen, durch schwache Datenbankberechtigungen oder fehlende Verschlüsselung Informationen zu extrahieren. Maßnahmen umfassen verschlüsselte Speicherung und eingeschränkte Zugriffskontrollen.",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 109,
+                  "score": ""
+                }
+              ],
               "storesInventory": null
             }
           },
@@ -1475,8 +1618,8 @@
                 "text": "Allsecure Mobile \nPhone OTT Service"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -1490,18 +1633,32 @@
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "87c3a4bf-c0cb-49b1-86dd-9f973ebae878",
+                  "title": "Manipulation des OTT Codes",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "description": "Ein Angreifer könnte versuchen, den OTT-Dienst zu manipulieren, um die Ausgabe des OTT-Codes zu verändern oder zu manipulieren, bevor dieser an den Benutzer gesendet wird.",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 114,
+                  "score": ""
+                }
+              ]
             }
           },
           {
             "position": {
-              "x": 180,
-              "y": -30
+              "x": 210,
+              "y": -55
             },
             "size": {
               "width": 150,
@@ -1512,8 +1669,8 @@
                 "text": "Report\nExport\nProcesse"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -1527,12 +1684,26 @@
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "0058f69c-17d3-4176-9278-07641104dd67",
+                  "title": "Informationsverlust",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Spoofing",
+                  "description": "Ein Angreifer könnte unbefugten Zugang zu den monatlich erstellten Exportberichten erhalten und dadurch Zugriff auf sensible Unternehmensdaten gewinnen.",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 113,
+                  "score": ""
+                }
+              ]
             }
           },
           {
@@ -1549,8 +1720,8 @@
                 "text": "SIEM"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -1564,12 +1735,26 @@
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "fcabf81c-d365-4eb7-bdd1-423646f360f2",
+                  "title": "Buggy Authorization Checks",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Elevation of privilege",
+                  "description": "Wenn die Überwachungssysteme nicht richtig gesichert sind oder fehlerhafte Autorisierungsprüfungen haben, könnten Angreifer möglicherweise auf vertrauliche Berichte zugreifen oder Alarmmeldungen deaktivieren.",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 110,
+                  "score": ""
+                }
+              ]
             }
           },
           {
@@ -1616,7 +1801,7 @@
     ],
     "reviewer": "Georg Neugebauer",
     "diagramTop": 10,
-    "threatTop": 102
+    "threatTop": 114
   },
   "version": "2.1.1"
 }
