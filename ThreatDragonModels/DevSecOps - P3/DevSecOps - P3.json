@@ -309,7 +309,10 @@
               "isBidirectional": false,
               "protocol": "",
               "isEncrypted": false,
-              "isPublicNetwork": false
+              "isPublicNetwork": false,
+              "handlesCardPayment": null,
+              "handlesGoodsOrServices": null,
+              "isWebApplication": null
             }
           },
           {
@@ -1718,8 +1721,8 @@
                 "text": "SIEM"
               },
               "body": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
                 "strokeDasharray": null
               }
             },
@@ -1733,7 +1736,7 @@
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": true,
+              "hasOpenThreats": false,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
@@ -1742,7 +1745,7 @@
                 {
                   "id": "fcabf81c-d365-4eb7-bdd1-423646f360f2",
                   "title": "Buggy Authorization Checks",
-                  "status": "Open",
+                  "status": "Mitigated",
                   "severity": "Low",
                   "type": "Elevation of privilege",
                   "description": "Wenn die Überwachungssysteme nicht richtig gesichert sind oder fehlerhafte Autorisierungsprüfungen haben, könnten Angreifer möglicherweise auf vertrauliche Berichte zugreifen oder Alarmmeldungen deaktivieren.\n\nCAPEC-233: Privilege Escalation -- Angreifer nutzen Schwächen in Autorisierungsprüfungen, um höhere Berechtigungen zu erlangen und unautorisierten Zugriff auf sensible Funktionen oder Daten zu erhalten.\n\nMITRE T212/T1068 --  Angreifer nutzen Schwächen in Autorisierungsmechanismen aus, um sich höhere Berechtigungen zu verschaffen, was zum unbefugten Zugriff auf vertrauliche Daten oder die Manipulation von Alarmfunktionen führen kann.\n\nD: 8 / R: 8 / E: 3 / A: 1 / DREA: 20",
@@ -1786,7 +1789,21 @@
               "reasonOutOfScope": "",
               "hasOpenThreats": false,
               "providesAuthentication": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "b28236ef-bd9c-4d4b-933c-afa64b9f757b",
+                  "title": "Social Engineering",
+                  "status": "Mitigated",
+                  "severity": "High",
+                  "type": "Spoofing",
+                  "description": "Fake email to get acces to data\n\nCAPEC-98: Phishing -- Angreifer Täuscht vertrauenwürdige EMail vor\n\nMITRE: DS0021 - Persona: Täuscht jemand anderes vor zu sein\n\nD 8 R 10 E 6 A 10 DREA: 34 \n\n",
+                  "mitigation": "Mitarbeiter Schulen und eventuelles EMail Filtering durchführen\n\nMITRE: D3-EF: Email Filtering -- Spam Filter und fake Signaturen raus filtern\n\nD 8 R 6 E 6 A 10 DREA: 30",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 115,
+                  "score": "30"
+                }
+              ]
             }
           }
         ],
@@ -1799,7 +1816,7 @@
     ],
     "reviewer": "Georg Neugebauer",
     "diagramTop": 10,
-    "threatTop": 114
+    "threatTop": 115
   },
   "version": "2.1.1"
 }
