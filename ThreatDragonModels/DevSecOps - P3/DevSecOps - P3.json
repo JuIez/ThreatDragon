@@ -1643,14 +1643,14 @@
                   "id": "87c3a4bf-c0cb-49b1-86dd-9f973ebae878",
                   "title": "Manipulation des OTT Codes",
                   "status": "Open",
-                  "severity": "Low",
+                  "severity": "Medium",
                   "type": "Tampering",
                   "description": "Ein Angreifer könnte versuchen, den OTT-Dienst zu manipulieren, um die Ausgabe des OTT-Codes zu verändern oder zu manipulieren, bevor dieser an den Benutzer gesendet wird.\n\nCAPEC-137: Parameter Injection -- Ermöglicht es Angreifern, Eingaben zu manipulieren, um unerlaubte Befehle auszuführen oder auf geschützte Daten zuzugreifen.\n\nMITRE: T1437.001 - - Application Layer Protocol: Web Protocols --  Angreifer nutzen Standard-Webprotokolle, um bösartige Kommunikation unauffällig einzuschleusen\n\nD: 10 / R: 2 / E: 7 / A: 2 / DREA: 21",
-                  "mitigation": "- Validierung der Eingaben und Parameter: Der OTT-Dienst sollte strikte Überprüfungen und Validierungen aller eingehenden Parameter anwenden, um sicherzustellen, dass sie nicht modifiziert wurden oder unerwartete Werte enthalten.\n\nOWASP ASVS V5.1 Eingabeprüfung -- Empfohlen zur Verhinderung von Injections\n\nD: 7 / R: 2 / E: 3 / A: 1 / DREA: 13",
+                  "mitigation": "- Validierung der Eingaben und Parameter: Der OTT-Dienst sollte strikte Überprüfungen und Validierungen aller eingehenden Parameter anwenden, um sicherzustellen, dass sie nicht modifiziert wurden oder unerwartete Werte enthalten.\n\nOWASP ASVS V5.1 Eingabeprüfung -- Empfohlen zur Verhinderung von Injections\n\nD: 8 / R: 2 / E: 4 / A: 1 / DREA: 15",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 114,
-                  "score": "13"
+                  "score": "15"
                 }
               ]
             }
