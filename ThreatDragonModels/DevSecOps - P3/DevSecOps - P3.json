@@ -67,8 +67,8 @@
                 "text": "Login System -\nWebapp +\nMobile App"
               },
               "body": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
                 "strokeDasharray": null
               }
             },
@@ -100,7 +100,7 @@
                 {
                   "id": "57d63425-ed04-4dd6-81a0-84e697b139a1",
                   "title": "Modifies redirects in webapp",
-                  "status": "Open",
+                  "status": "Mitigated",
                   "severity": "Low",
                   "type": "Tampering",
                   "description": "Ein Angreifer könnte manipulierte Weiterleitungen in der Webanwendung einfügen, um Benutzer auf schädliche Seiten umzuleiten.\n\nCAPEC-34 - \"HTTP Response Splitting\" (könnte verwendet werden, um die Weiterleitungen zu manipulieren).\n\nMITRE: T1437.001 - - Application Layer Protocol: Web Protocols --  Angreifer nutzen Standard-Webprotokolle, um bösartige Kommunikation unauffällig einzuschleusen\n\nD: 10 / R: 2 / E: 7 / A: 2 / DREA: 21",
@@ -113,7 +113,7 @@
                 {
                   "id": "65dd1119-4397-4af2-997b-1e19133f6212",
                   "title": "Claims to have not received",
-                  "status": "Open",
+                  "status": "Mitigated",
                   "severity": "Low",
                   "type": "Repudiation",
                   "description": "Ein Benutzer behaupten könnte, den OTT nicht erhalten zu haben.\n\nCAPEC-216 - \"Communication Channel Manipulation\" - Bezug auf die Möglichkeit, OTT abzufangen oder zu manipulieren.\n\nMITRE: T1078 -- Tactic \"Defense Evasion\"  - Valid Accounts (sich als legitimer Nutzer ausgeben, z.B. durch das Behaupten, keinen OTT erhalten zu haben).\n\nD: 3 / R: 9 / E: 2 / A: 1 / DREA: 15",
@@ -124,7 +124,7 @@
                   "score": "6"
                 }
               ],
-              "hasOpenThreats": true,
+              "hasOpenThreats": false,
               "isWebApplication": null,
               "handlesCardPayment": null,
               "handlesGoodsOrServices": null
