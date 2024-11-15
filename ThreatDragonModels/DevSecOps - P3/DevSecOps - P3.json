@@ -144,8 +144,8 @@
                 "text": "2-Faktor-Authe\nntifizierungsdi\nenst"
               },
               "body": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
                 "strokeDasharray": null
               }
             },
@@ -164,7 +164,7 @@
                 {
                   "id": "d45ac3a6-478d-4479-abc3-7577439e0e04",
                   "title": "Spoofing von Nutzeridentitäten",
-                  "status": "Open",
+                  "status": "Mitigated",
                   "severity": "Low",
                   "type": "Spoofing",
                   "description": "Ein Angreifer könnte sich als legitimer Benutzer ausgeben und versuchen, den OTT (One-Time Token) abzufangen oder zu erraten, um Zugang zu einem Konto zu erhalten.\n\nCAPEC-151: Identity Spoofing - Ermöglicht es Angreifern, die Identität eines anderen Nutzers vorzutäuschen, um auf Ressourcen oder Daten zuzugreifen, zu denen sie ansonsten keinen Zugriff hätten.\n\nMITRE:  T1078 - Valid Accounts -- Angreifer nutzt legitime Anmelde Daten um sich als Nutzer auszugeben, um Zugang zu einem Konto zu erhalten. \n\nD: 10 / R: 2 / E: 7 / A: 2 / DREA: 21",
@@ -175,7 +175,7 @@
                   "score": "12"
                 }
               ],
-              "hasOpenThreats": true,
+              "hasOpenThreats": false,
               "isBidirectional": false,
               "protocol": "",
               "isEncrypted": false,
@@ -1478,13 +1478,11 @@
                 "text": "Log-DB"
               },
               "topLine": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
+                "strokeWidth": 1.5,
                 "strokeDasharray": null
               },
               "bottomLine": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
+                "strokeWidth": 1.5,
                 "strokeDasharray": null
               }
             },
@@ -1502,20 +1500,20 @@
               "storesCredentials": false,
               "isEncrypted": true,
               "isSigned": true,
-              "hasOpenThreats": true,
+              "hasOpenThreats": false,
               "threats": [
                 {
                   "id": "417fca9e-4ed6-43ca-8a42-786145c0d77a",
                   "title": "Data Stores",
-                  "status": "Open",
+                  "status": "Mitigated",
                   "severity": "Medium",
                   "type": "Information disclosure",
                   "description": "Ein Angreifer könnte hier versuchen, durch schwache Datenbankberechtigungen oder fehlende Verschlüsselung Informationen zu extrahieren. Maßnahmen umfassen verschlüsselte Speicherung und eingeschränkte Zugriffskontrollen.\n\nCAPEC-122: Privilege Abuse -- Angreifer nutzen schwache Berechtigungen oder unzureichende Zugriffskontrollen aus, um unautorisiert auf sensible Daten zuzugreifen.\n\nMITRE: T1555 - Credentials from Password Stores -- Angreifer versuchen auf ungeschützt oder schwach geschütze Datenbanken zuzugreifen um Daten zu extrahieren. \n\nD: 5 / R: 10 / E: 4 / A: 10 / DREA: 29",
-                  "mitigation": "- Verschlüsselte Speicherung sensibler Daten – Gewährleistung, dass alle sensiblen Informationen in der Datenbank sicher verschlüsselt gespeichert werden, um den Zugriff auf die Rohdaten einzuschränken.\n\nOWASP ASVS V4 -- Maßnahmen zur Zugriffssteuerung - Sicherstellen, dass nur autorisierte Personen Zugriff auf Ressourcen haben und dass Rollen und Berechtigungen manipulationssicher gespeichert werden.\n\nD: 3 / R: 7 / E: 2 / A: 5 / DREA: 15",
+                  "mitigation": "- Verschlüsselte Speicherung sensibler Daten – Gewährleistung, dass alle sensiblen Informationen in der Datenbank sicher verschlüsselt gespeichert werden, um den Zugriff auf die Rohdaten einzuschränken.\n\nOWASP ASVS V4 -- Maßnahmen zur Zugriffssteuerung - Sicherstellen, dass nur autorisierte Personen Zugriff auf Ressourcen haben und dass Rollen und Berechtigungen manipulationssicher gespeichert werden.\n\nD: 3 / R: 7 / E: 2 / A: 10 / DREA: 20",
                   "modelType": "STRIDE",
                   "new": false,
                   "number": 109,
-                  "score": "15"
+                  "score": "20"
                 }
               ],
               "storesInventory": null
@@ -1618,8 +1616,8 @@
                 "text": "Allsecure Mobile \nPhone OTT Service"
               },
               "body": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
                 "strokeDasharray": null
               }
             },
@@ -1633,7 +1631,7 @@
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": true,
+              "hasOpenThreats": false,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
@@ -1642,7 +1640,7 @@
                 {
                   "id": "87c3a4bf-c0cb-49b1-86dd-9f973ebae878",
                   "title": "Manipulation des OTT Codes",
-                  "status": "Open",
+                  "status": "Mitigated",
                   "severity": "Medium",
                   "type": "Tampering",
                   "description": "Ein Angreifer könnte versuchen, den OTT-Dienst zu manipulieren, um die Ausgabe des OTT-Codes zu verändern oder zu manipulieren, bevor dieser an den Benutzer gesendet wird.\n\nCAPEC-137: Parameter Injection -- Ermöglicht es Angreifern, Eingaben zu manipulieren, um unerlaubte Befehle auszuführen oder auf geschützte Daten zuzugreifen.\n\nMITRE: T1437.001 - - Application Layer Protocol: Web Protocols --  Angreifer nutzen Standard-Webprotokolle, um bösartige Kommunikation unauffällig einzuschleusen\n\nD: 10 / R: 2 / E: 7 / A: 2 / DREA: 21",
@@ -1669,8 +1667,8 @@
                 "text": "Report\nExport\nProcesse"
               },
               "body": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
                 "strokeDasharray": null
               }
             },
@@ -1684,7 +1682,7 @@
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": true,
+              "hasOpenThreats": false,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
@@ -1693,7 +1691,7 @@
                 {
                   "id": "0058f69c-17d3-4176-9278-07641104dd67",
                   "title": "Informationsdiebstahl",
-                  "status": "Open",
+                  "status": "Mitigated",
                   "severity": "Low",
                   "type": "Spoofing",
                   "description": "Ein Angreifer könnte unbefugten Zugang zu den monatlich erstellten Exportberichten erhalten und dadurch Zugriff auf sensible Unternehmensdaten gewinnen.\n\nCAPEC-118: Collect and Analyze Information -- Angreifer verschaffen sich Zugriff auf sensible Daten, indem sie Datenübertragungen oder Speichersysteme ausnutzen, die unzureichend gesichert sind.\n\nMITRE: T1115 - Clipboard Data -- Angreifer kann ohne Rechte in der Zwischenablage Berichte einsehen.\n\nD: 3 / R: 9 / E: 2 / A: 1 / DREA: 15",
